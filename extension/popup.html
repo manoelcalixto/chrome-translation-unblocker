@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desbloqueador de Tradução do Chrome</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="popup.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <p class="eyebrow">LEITURA NO SEU IDIOMA</p>
+      <h1>Desbloqueador de tradução</h1>
+      <p class="intro">Use o tradutor do Chrome em mais páginas.</p>
+    </header>
+
+    <main>
+      <div class="setting">
+        <span id="toggle-label">Ativar em todos os sites</span>
+        <button id="enabled" type="button" role="switch" aria-checked="false"
+                aria-labelledby="toggle-label" disabled><span></span></button>
+      </div>
+      <p id="status" role="status" aria-live="polite">Verificando a página…</p>
+      <p id="error" role="alert" hidden></p>
+
+      <h2>Como traduzir</h2>
+      <ol>
+        <li>Recarregue a página após instalar a extensão.</li>
+        <li>No menu do Chrome, escolha <strong>Traduzir</strong> e selecione <strong>Português</strong>.</li>
+        <li>Se já havia traduzido apenas o menu, mostre o original e traduza novamente.</li>
+      </ol>
+      <p class="note">A tradução continua sendo feita pelo Chrome.</p>
+    </main>
+
+    <footer>Para restringir a sites específicos, use as opções de acesso ao site no menu de extensões do Chrome.</footer>
+  </body>
+</html>

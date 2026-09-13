@@ -1,0 +1,20 @@
+{
+  "name": "chrome-translation-unblocker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Extensão Chrome para liberar a tradução nativa de páginas web.",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "lint": "eslint .",
+    "validate": "node scripts/validate.mjs",
+    "test": "playwright test",
+    "check": "npm run lint && npm run validate && npm test"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.63.0",
+    "eslint": "10.10.0"
+  }
+}

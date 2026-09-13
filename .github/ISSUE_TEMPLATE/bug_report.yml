@@ -1,0 +1,24 @@
+name: Relatar problema
+description: Informe um comportamento inesperado na extensão.
+body:
+  - type: markdown
+    attributes:
+      value: 'Não inclua credenciais, dados pessoais ou conteúdo privado. Para vulnerabilidades, use o canal indicado em SECURITY.md.'
+  - type: textarea
+    id: behavior
+    attributes:
+      label: O que aconteceu?
+      description: Descreva o resultado esperado e o observado.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Como reproduzir?
+      description: Use um exemplo público ou HTML mínimo quando possível.
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Versão do Chrome e da extensão

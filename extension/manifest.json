@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Desbloqueador de Tradução do Chrome",
+  "version": "1.0.0",
+  "description": "Libera textos de páginas para o tradutor nativo do Chrome, com opção de pausar o ajuste.",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Desbloqueador de Tradução do Chrome",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "ISOLATED"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; base-uri 'none'; connect-src 'none'"
+  }
+}
